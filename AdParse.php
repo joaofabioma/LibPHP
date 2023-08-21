@@ -14,12 +14,12 @@ function catchException($e)
 {
     if (error_reporting() === 0) {
         return;
-    } else {
+    } /*else { // DEV &&/|| DEBUG
         $r = $e;
         $r->xdebug_message = null;
         //var_dump($e);
         return false;
-    }
+    }*/
 }
 set_exception_handler('catchException');
 
